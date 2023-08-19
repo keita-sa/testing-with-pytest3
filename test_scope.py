@@ -3,22 +3,22 @@
 import pytest
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='function') # テスト関数ごとに1回実行される
 def func_scope():
     """A function scope fixture."""
 
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope='module') # テストファイル全体で1回実行される
 def mod_scope():
     """A module scope fixture."""
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope='session') # テスト全体で1回だけ実行される
 def sess_scope():
     """A session scope fixture."""
 
 
-@pytest.fixture(scope='class')
+@pytest.fixture(scope='class') # テストクラス全体で1回実行される
 def class_scope():
     """A class scope fixture."""
 
